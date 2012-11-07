@@ -534,6 +534,18 @@ namespace Inscribe.ViewModels.PartBlocks.MainBlock
 
         #endregion
 
+        public bool TabLocked
+        {
+            get
+            {
+                return this.TabProperty.TabLocked;
+            }
+            set
+            {
+                this.TabProperty.TabLocked = value;
+            }
+        }
+
         #region MoveFocusToThisCommand
         ViewModelCommand _MoveFocusToThisCommand;
 
@@ -852,6 +864,10 @@ namespace Inscribe.ViewModels.PartBlocks.MainBlock
 
         private void Close()
         {
+            if (_tabProperty.TabLocked)
+            {
+                return;
+            }
             Parent.CloseTab(this);
         }
         #endregion

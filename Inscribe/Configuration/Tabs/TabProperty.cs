@@ -193,5 +193,7 @@ namespace Inscribe.Configuration.Tabs
                 OnLinkAccountInfoChanged(EventArgs.Empty);
             }
         }
+        
+        public bool TabLocked { get; set; }
     }
 }

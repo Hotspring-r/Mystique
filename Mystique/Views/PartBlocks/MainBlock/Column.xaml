@@ -54,6 +54,7 @@
                             </Style>
                         </ContextMenu.Style>
                         <MenuItem Command="{Binding Path=EditTabCommand}" Header="このタブを編集(_E)..." />
+                        <MenuItem Header="このタブをロックする(_L)" IsCheckable="True" IsChecked="{Binding Path=TabLocked}"/>
                         <MenuItem Header="このタブについて(_T)" Visibility="{Binding IsTranscender, Converter={StaticResource BoolVisibleConverter}}">
                             <MenuItem Command="{Binding SaveTabAsSTOTCommand}" Header="このタブをSTOT形式で書きだす(_W)..." />
                             <Separator />
